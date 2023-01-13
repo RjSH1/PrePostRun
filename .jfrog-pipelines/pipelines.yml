@@ -1,16 +1,15 @@
 pipelines:
-  - name: testPreAndPostRuns
+  - name: PreAndPostRuns
     preRun:
       execution:
         onExecute:
           - printenv
           - echo "Executing Pre Run"
-          - echo "me starting"
     postRun:
       execution:
         onExecute:
           - printenv
-          - echo "Executing Pre Run"
+          - echo "Executing Post Run"
     steps:
       - name: A
         type: Bash
